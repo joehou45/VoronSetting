@@ -21,8 +21,8 @@ camera="usb"
 #
 # Defaults to a resolution of 640x480 px and a framerate of 10 fps
 #
-camera_usb_options="-r 1280x720 -f 10 -d /dev/v4l/by-id/usb-046d_0825_5BB9ECC0-video-index0"
- 
+camera_usb_options="-r 1024x768 -f 10 -d /dev/v4l/by-id/usb-138d_HD_Camera-video-index0"
+
 ### Additional webcam devices known to cause problems with -f
 #
 # Apparently there a some devices out there that with the current 
@@ -47,7 +47,7 @@ camera_usb_options="-r 1280x720 -f 10 -d /dev/v4l/by-id/usb-046d_0825_5BB9ECC0-v
 #   additional_brokenfps_usb_devices=("aabb:ccdd" "aabb:eeff")
 #
 #
-#additional_brokenfps_usb_devices=()
+additional_brokenfps_usb_devices=("046d:0825")
 
 ### Additional options to supply to MJPG Streamer for the RasPi Cam
 #
@@ -69,8 +69,7 @@ camera_usb_options="-r 1280x720 -f 10 -d /dev/v4l/by-id/usb-046d_0825_5BB9ECC0-v
 # Current working directory is the mjpg-streamer base directory.
 #
 #camera_http_webroot="./www-mainsail"
-#camera_http_options="-n"
-#camera_http_options="-n -p 8081"
+camera_http_options="-n -p 8081"
 
 ### EXPERIMENTAL
 # Support for different streamer types.
